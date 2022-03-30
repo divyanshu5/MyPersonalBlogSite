@@ -1,0 +1,11 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<p><%=paraGraph%></p>
+<% for(let i=0;i<posts.length;i++){ %>
+  <h1><%=posts[i].postText %></h1>
+  <p class="minimize" ><%=posts[i].postBody.substring(0,100)+"... " %>
+    <a href="/posts/<%=posts[i].postText %>">Read More</a></p>
+<%} %>
+
+<%- include("partials/footer") -%>
